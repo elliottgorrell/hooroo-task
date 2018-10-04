@@ -15,7 +15,7 @@ class AccomList extends Component {
 
     return (
       <div>
-        {hotels.map(hotel => <Result key={hotel.id} imageUrl={hotel.image} className="result" />)}
+        {hotels.map(hotel => <Result key={hotel.id} {...hotel} className="result" />)}
       </div>
     );
   }
