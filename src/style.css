@@ -13,17 +13,27 @@
   grid-template-columns: 145px auto;
   grid-template-rows: auto;
   column-gap: 30px;
+  margin: 10px;
+}
+.result .title h3 {
+  display: inline-block;
+  margin: 0;
+  font-size: 30px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 .resultInfo {
-  grid-column: span 1,
+  grid-column: span 1;
+  border-top: solid #848484;
+  border-width: 1px;
 }
 
 
 /* Stars */
 .ratings {
   position: relative;
-  vertical-align: middle;
   display: inline-block;
   color: #b1b1b1;
   overflow: hidden;
