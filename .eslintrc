@@ -10,6 +10,7 @@
     "jest": true
   },
   "rules": {
+    "react/prefer-stateless-function": false,
     "indent": [2, 2],
     "import/no-extraneous-dependencies": [2, {
       "devDependencies": true
