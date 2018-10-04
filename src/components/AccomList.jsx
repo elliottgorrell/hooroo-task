@@ -11,9 +11,11 @@ class AccomList extends Component {
   }
 
   render() {
+    const { results: hotels } = this.state;
+
     return (
       <div>
-        <Result imageUrl="https://unsplash.it/145/125/?random" className="result" />
+        {hotels.map(hotel => <Result key={hotel.id} imageUrl={hotel.image} className="result" />)}
       </div>
     );
   }
