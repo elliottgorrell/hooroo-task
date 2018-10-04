@@ -2,7 +2,14 @@ import React, { Component } from 'react';
 
 import Result from './AccomResult';
 
-class ResultsList extends Component {
+import dummyData from '../assets/dummyData';
+
+class AccomList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { results: dummyData };
+  }
+
   render() {
     return (
       <div>
@@ -12,4 +19,4 @@ class ResultsList extends Component {
   }
 }
 
-export default ResultsList;
+export default AccomList;
