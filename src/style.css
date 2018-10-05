@@ -33,6 +33,11 @@
   position: absolute;
 }
 
+.result .title {
+  display: grid;
+  grid-template-rows: auto auto;
+}
+
 .result .title h3 {
   display: inline-block;
   margin: 0;
@@ -56,6 +61,18 @@
   border-width: 1px;
 }
 
+.resultInfo .info {
+  display: grid;
+  grid-template-columns: 40% auto;
+  align-items: center;
+}
+
+.resultInfo .infoRight {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  justify-items: end;
+}
+
 .promotionBox {
   position: relative;
   display: inline-block;
@@ -72,6 +89,11 @@
   content: '$';
   font-size: 14px;
   vertical-align: text-top;
+}
+
+.sortSelector {
+  float: right;
+  width: 150px;
 }
 
 

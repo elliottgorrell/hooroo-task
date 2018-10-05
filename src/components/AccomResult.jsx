@@ -3,10 +3,11 @@ import PropTypes from 'prop-types';
 
 class Result extends Component {
   render() {
-    const { id, title, address, image,
-      rating, ratingType, promotion, 
-      roomName, price, savings, freeCancellation } 
-      = this.props;
+    const {
+      title, address, image,
+      rating, ratingType, promotion,
+      roomName, price, savings, freeCancellation,
+    } = this.props;
 
     return (
       <div className="result">
@@ -18,22 +19,22 @@ class Result extends Component {
         </div>
 
         <div className="resultInfo">
-          <div className="title" style={{ display: 'grid', gridTemplateRows: 'auto auto' }}>
-          <div>
-            <h3 style={{ maxWidth: '50%' }}> {title} </h3>
-            <div className="ratings">
-              <div className={ratingType === 'star' ? 'emptyStars' : 'emptyCircles '} />
-              <div className={ratingType === 'star' ? 'fullStars fullRatingIcons' : 'fullCircles fullRatingIcons'} style={{ width: `${rating * 20}%` }} />
+          <div className="title">
+            <div>
+              <h3 style={{ maxWidth: '50%' }}> {title} </h3>
+              <div className="ratings">
+                <div className={ratingType === 'star' ? 'emptyStars' : 'emptyCircles '} />
+                <div className={ratingType === 'star' ? 'fullStars fullRatingIcons' : 'fullCircles fullRatingIcons'} style={{ width: `${rating * 20}%` }} />
+              </div>
             </div>
-          </div>
 
             <div><p>{address}</p></div>
           </div>
-          <div className="info" style={{ display: 'grid', gridTemplateColumns: '40% auto', alignItems: 'center' }}>
-            <a href="#" style={{ gridColumn: '1', color: 'red' }}>{roomName}</a>
-            <div style={{ gridColumn: '2', display: 'grid', gridTemplateRows: 'auto auto auto', justifyItems: 'end' }}>
+          <div className="info">
+            <a href="#" style={{ color: 'red' }}>{roomName}</a>
+            <div className="infoRight">
               <div style={{ fontSize: '14px' }}> <b>1</b> night total (AUD) </div>
-              <div style={{ fontSize: '24px'  }}><span className="dollar">{price}</span></div>
+              <div style={{ fontSize: '24px' }}><span className="dollar">{price}</span></div>
               {savings > 0
               && <div className="saving" style={{ color: 'red', fontSize: '18px' }}>Save ${savings}~</div>
               }

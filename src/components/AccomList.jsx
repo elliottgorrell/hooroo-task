@@ -35,7 +35,7 @@ class AccomList extends Component {
         <div className="topPane">
           <p><b>5</b> Hotels in <b>Sydney</b></p>
           <div>
-            <select className="sortSelector" style={{ float: 'right', width: '100px' }} onChange={this.onSort} value={this.state.sortingOrder}>
+            <select className="sortSelector" onChange={this.onSort} value={this.state.sortingOrder}>
               <option disabled selected value value="default"> -- Sort By Price -- </option>
               <option value="low">low-high</option>
               <option value="high">high-low</option>
