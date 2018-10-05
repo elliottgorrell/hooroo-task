@@ -12,6 +12,9 @@ class Result extends Component {
       <div className="result">
         <div className="resultImage">
           <img src={image} alt="The hotel" />
+          {promotion
+          && <div className="promotionBox"> {promotion} </div>
+          }
         </div>
 
         <div className="resultInfo">
@@ -24,13 +27,13 @@ class Result extends Component {
             </div>
           </div>
 
-            <div>{address}</div>
+            <div><p>{address}</p></div>
           </div>
           <div className="info" style={{ display: 'grid', gridTemplateColumns: '40% auto', alignItems: 'center' }}>
             <a href="#" style={{ gridColumn: '1', color: 'red' }}>{roomName}</a>
             <div style={{ gridColumn: '2', display: 'grid', gridTemplateRows: 'auto auto auto', justifyItems: 'end' }}>
               <div style={{ fontSize: '14px' }}> <b>1</b> night total (AUD) </div>
-              <div style={{ fontSize: '24px'  }}>${price}</div>
+              <div style={{ fontSize: '24px'  }}><span className="dollar">{price}</span></div>
               {savings > 0
               && <div className="saving" style={{ color: 'red', fontSize: '18px' }}>Save ${savings}~</div>
               }
