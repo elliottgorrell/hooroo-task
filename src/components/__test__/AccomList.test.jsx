@@ -36,6 +36,7 @@ describe('AccomList', () => {
 
     const allHotels = wrapper.find(AccomResult).map(x => x.props());
 
+    // wrapper.find() seems to gather an array with nodes in desc order so have to check sorting in reverse
     const checkAscending = hotels => hotels.every((hotel, index) => index === 0 || hotel.price <= hotels[index - 1].price);
     expect(checkAscending(allHotels)).toBeTruthy();
   });
@@ -45,7 +46,7 @@ describe('AccomList', () => {
     wrapper.find('.sortSelector').simulate('change', { target: { value: 'high' } });
 
     const allHotels = wrapper.find(AccomResult).map(x => x.props());
-
+    // wrapper.find() seems to gather an array with nodes in desc order so have to check sorting in reverse
     const checkDescending = hotels => hotels.every((hotel, index) => index === 0 || hotel.price >= hotels[index - 1].price);
     expect(checkDescending(allHotels)).toBeTruthy();
   });
