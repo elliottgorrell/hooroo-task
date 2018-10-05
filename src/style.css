@@ -10,16 +10,17 @@
 .AppHeader {
   display: grid;
   grid-template-columns: 145px auto;
-  grid-template-rows: 50px 55px;
-  column-gap: 30px;
+  grid-template-rows: 50px;
   margin: 10px;
 }
 
-.resultsList {
+.topPane {
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto;
+  grid-template-columns: 145px auto;
+  grid-template-rows: 50px;
+  margin: 10px;
 }
+
 .result {
   display: grid;
   grid-template-columns: 145px auto;
