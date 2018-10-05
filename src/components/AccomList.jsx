@@ -12,7 +12,7 @@ class AccomList extends Component {
       sortingOrder: 'default'
     };
   }
-
+  
   sortByHigh = (list) => {
     return list.sort((a, b) => a.price - b.price);
   }

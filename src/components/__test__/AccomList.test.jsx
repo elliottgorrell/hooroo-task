@@ -29,4 +29,24 @@ describe('AccomList', () => {
     const { wrapper } = setup();
     expect(wrapper.find(AccomResult)).toHaveLength(5);
   });
+
+  test('Sorting by Price Low->High works', () => {
+    const { wrapper } = setup();
+    wrapper.find('.sortSelector').simulate('change', { target: { value: 'low' } });
+
+    const allHotels = wrapper.find(AccomResult).map(x => x.props());
+
+    const checkAscending = hotels => hotels.every((hotel, index) => index === 0 || hotel.price <= hotels[index - 1].price);
+    expect(checkAscending(allHotels)).toBeTruthy();
+  });
+
+  test('Sorting by Price High->Low works', () => {
+    const { wrapper } = setup();
+    wrapper.find('.sortSelector').simulate('change', { target: { value: 'high' } });
+
+    const allHotels = wrapper.find(AccomResult).map(x => x.props());
+
+    const checkDescending = hotels => hotels.every((hotel, index) => index === 0 || hotel.price >= hotels[index - 1].price);
+    expect(checkDescending(allHotels)).toBeTruthy();
+  });
 });
