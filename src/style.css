@@ -59,11 +59,3 @@
   content: "\25CF\25CF\25CF\25CF\25CF";
   font-size: 14pt;
 }
-
-/* Webkit-text-stroke is not supported on firefox or IE */
-/* Firefox */
-@-moz-document url-prefix() {
-  .full-stars{
-    color: #ECBE24;
-  }
-}
