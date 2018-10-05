@@ -69,17 +69,17 @@ describe('AccomResult Component', () => {
 
   test('When there is a Promotion of "Exclusive Deal" the relevant box is displayed over the hotel image', () => {
     const { wrapper } = setup();
-    expect(wrapper.text('.promotionOverlay')).toEqual('Exclusive Deal');
+    expect(wrapper.find('.promotionBox').text().trim()).toEqual('Exclusive Deal');
   });
 
   test('When there is a Promotion of "Red Hot" the relevant box is displayed over the hotel image', () => {
     const { wrapper } = setup({ promotion: 'Red Hot' });
-    expect(wrapper.text('.promotionOverlay')).toEqual('Red Hot');
+    expect(wrapper.find('.promotionBox').text().trim()).toEqual('Red Hot');
   });
 
   test('When there is a Promotion of "Bonus Points" the relevant box is displayed over the hotel image', () => {
     const { wrapper } = setup({ promotion: 'Bonus Points' });
-    expect(wrapper.text('.promotionOverlay')).toEqual('Bonus Points');
+    expect(wrapper.find('.promotionBox').text().trim()).toEqual('Bonus Points');
   });
 
   test('When there is no Promotion no box is displayed over the hotel image', () => {
