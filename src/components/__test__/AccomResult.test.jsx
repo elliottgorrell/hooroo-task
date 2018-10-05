@@ -44,17 +44,17 @@ describe('AccomResult Component', () => {
 
   test('The correct width is calculated from the rating (4 == 80%)', () => {
     const { wrapper } = setup();
-    expect(wrapper.find('.full-stars').props().style).toHaveProperty('width', '80%');
+    expect(wrapper.find('.fullRatingIcons').props().style).toHaveProperty('width', '80%');
   });
 
   test('When rating type is "self" circles are displayed', () => {
     const { wrapper } = setup({ ratingType: 'self' });
-    expect(wrapper.exists('.full-circles')).toBeTruthy();
+    expect(wrapper.exists('.fullCircles')).toBeTruthy();
   });
 
   test('When rating type is "star" stars are displayed', () => {
     const { wrapper } = setup({ ratingType: 'star' });
-    expect(wrapper.exists('.full-stars')).toBeTruthy();
+    expect(wrapper.exists('.fullStars')).toBeTruthy();
   });
 
   test('A free cancellation message is shown when hotel has this offer', () => {

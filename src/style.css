@@ -39,7 +39,7 @@
   overflow: hidden;
 }
 
-.full-stars{
+.fullRatingIcons{
   position: absolute;
   left: 0;
   top: 0;
@@ -48,18 +48,16 @@
   color: #fde16d;
 }
 
-.empty-stars:before,
-.full-stars:before {
+.emptyStars:before,
+.fullRatingIcons.fullStars:before {
   content: "\2605\2605\2605\2605\2605";
   font-size: 14pt;
 }
 
-.empty-stars:before {
-  -webkit-text-stroke: 1px #848484;
-}
-
-.full-stars:before {
-  -webkit-text-stroke: 1px orange;
+.emptyCircles:before,
+.fullRatingIcons.fullCircles:before {
+  content: "\25CF\25CF\25CF\25CF\25CF";
+  font-size: 14pt;
 }
 
 /* Webkit-text-stroke is not supported on firefox or IE */

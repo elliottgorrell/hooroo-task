@@ -19,8 +19,8 @@ class Result extends Component {
           <div>
             <h3 style={{ maxWidth: '50%' }}> {title} </h3>
             <div className="ratings">
-              <div className="empty-stars" />
-              <div className="full-stars" style={{ width: `${rating * 20}%` }} />
+              <div className={ratingType === 'star' ? 'emptyStars' : 'emptyCircles '} />
+              <div className={ratingType === 'star' ? 'fullStars fullRatingIcons' : 'fullCircles fullRatingIcons'} style={{ width: `${rating * 20}%` }} />
             </div>
           </div>
 
