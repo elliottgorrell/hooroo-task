@@ -3,6 +3,18 @@
   margin: 0 auto;
 }
 
+.AppLogo {
+  width: 100%;
+}
+
+.AppHeader {
+  display: grid;
+  grid-template-columns: 145px auto;
+  grid-template-rows: 50px 55px;
+  column-gap: 30px;
+  margin: 10px;
+}
+
 .resultsList {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
