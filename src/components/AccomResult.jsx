@@ -29,16 +29,18 @@ class Result extends Component {
           <div className="info" style={{ display: 'grid', gridTemplateColumns: '40% auto', alignItems: 'center' }}>
             <a href="#" style={{ gridColumn: '1', color: 'red' }}>{roomName}</a>
             <div style={{ gridColumn: '2', display: 'grid', gridTemplateRows: 'auto auto auto', justifyItems: 'end' }}>
-              <div style={{ gridRow: '1', fontSize: '14px' }}> <b>1</b> night total (AUD) </div>
-              <div style={{ gridRow: '2', fontSize: '24px'  }}>${price}</div>
+              <div style={{ fontSize: '14px' }}> <b>1</b> night total (AUD) </div>
+              <div style={{ fontSize: '24px'  }}>${price}</div>
               {savings > 0
-              && <div className="saving" style={{ gridRow: '3', color: 'red', fontSize: '18px' }}>Save ${savings}~</div>
+              && <div className="saving" style={{ color: 'red', fontSize: '18px' }}>Save ${savings}~</div>
               }
             </div>
           </div>
 
           <div>
-            <span style={{ color: 'green' }}>{freeCancellation ? 'Free Cancellation' : null }</span>
+            {freeCancellation
+            && <span className="freeCancellation"  style={{ color: 'green' }}>{freeCancellation ? 'Free Cancellation' : null }</span>
+            }
           </div>
         </div>
       </div>
